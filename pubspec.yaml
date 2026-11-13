@@ -1,0 +1,24 @@
+name: pawdoodle_brush_engine
+description: PawDoodle's streaming brush renderer and custom brush presets for Flutter.
+version: 0.1.0
+repository: https://github.com/sherrywang2017/pawdoodle-brush-engine
+publish_to: none
+
+environment:
+  sdk: ^3.12.0
+  flutter: '>=3.44.8'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  web: ^1.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  shaders:
+    - assets/shaders/contact_material.frag
+  assets:
+    - assets/brush_resources/paper_noise.png

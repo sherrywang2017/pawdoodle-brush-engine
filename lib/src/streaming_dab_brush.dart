@@ -1,0 +1,75 @@
+// Public entry point. Implementation modules share this library so private
+// state and existing import paths keep their original visibility.
+import 'dart:math' as math;
+import 'dart:typed_data';
+import 'dart:ui' as ui;
+
+import 'contact_material_surface.dart';
+import 'hair_vertex_buffer.dart';
+import 'swept_coverage.dart';
+
+import 'package:flutter/foundation.dart' show kIsWasm, kIsWeb;
+import 'package:flutter/material.dart';
+
+import 'brush_behavior.dart';
+import 'brush_arithmetic.dart';
+import 'brush_kernel.dart';
+import 'brush_shape_field.dart';
+import 'brush_stamp.dart';
+import 'brush_tip_field.dart';
+import 'brush_raster_resource.dart';
+import 'brush_performance_capture.dart';
+import 'brush_emission_segment.dart';
+import 'smooth_stroke.dart';
+import 'streaming_brush_engine.dart';
+import 'streaming_stroke_parameters.dart';
+import 'streaming_stroke_modeler.dart';
+import 'unified_brush_program.dart';
+
+part 'engine/emission/dab_emission.dart';
+part 'engine/emission/streaming_dab_stroke.dart';
+part 'engine/materials/dab_body_mesh.dart';
+part 'engine/materials/dab_contact_ribbon.dart';
+part 'engine/materials/dab_contact_turn.dart';
+part 'engine/materials/dab_wax_bend.dart';
+part 'engine/materials/dab_fur_clusters.dart';
+part 'engine/materials/dab_material_frames.dart';
+part 'engine/materials/dab_media_accumulation.dart';
+part 'engine/materials/dab_persistent_lanes.dart';
+part 'engine/materials/dab_streaming_filaments.dart';
+part 'engine/materials/dab_swept_coverage.dart';
+part 'engine/paper/dab_environment.dart';
+part 'engine/paper/dab_paper.dart';
+part 'engine/parameters/dab_coverage_transfer.dart';
+part 'engine/parameters/dab_density_layer.dart';
+part 'engine/parameters/dab_dry_wax.dart';
+part 'engine/parameters/dab_dynamics.dart';
+part 'engine/parameters/dab_emission_parameters.dart';
+part 'engine/parameters/dab_filament_layers.dart';
+part 'engine/parameters/dab_footprint.dart';
+part 'engine/parameters/dab_grain.dart';
+part 'engine/parameters/dab_paper_contact.dart';
+part 'engine/parameters/dab_persistent_lane_layer.dart';
+part 'engine/parameters/dab_streaming_filament_layer.dart';
+part 'engine/parameters/dab_template.dart';
+part 'engine/parameters/dab_validation.dart';
+part 'engine/parameters/dab_wet_media.dart';
+part 'engine/presets/dab_brush_definition.dart';
+part 'engine/presets/dab_builtin_definitions.dart';
+part 'engine/rendering/dab_batches.dart';
+part 'engine/rendering/dab_cache_painting.dart';
+part 'engine/rendering/dab_cache_sync.dart';
+part 'engine/rendering/dab_command_builder.dart';
+part 'engine/rendering/dab_diagnostics.dart';
+part 'engine/rendering/dab_geometry_types.dart';
+part 'engine/rendering/dab_instance_evaluator.dart';
+part 'engine/rendering/dab_ownership.dart';
+part 'engine/rendering/dab_render_cache.dart';
+part 'engine/rendering/dab_renderer.dart';
+part 'engine/rendering/dab_stamp_buffer.dart';
+part 'engine/rendering/dab_tap_renderer.dart';
+part 'engine/resources/dab_atlas_factory.dart';
+part 'engine/resources/dab_grain_texture.dart';
+part 'engine/resources/dab_raster_texture.dart';
+part 'engine/resources/dab_resource.dart';
+part 'engine/resources/dab_tip_painter.dart';

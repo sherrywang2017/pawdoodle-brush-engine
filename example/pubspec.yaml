@@ -1,0 +1,15 @@
+name: pawdoodle_brush_demo
+description: Interactive canvas for the PawDoodle brush engine.
+publish_to: none
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pawdoodle_brush_engine:
+    path: ..
+
+flutter:
+  uses-material-design: true
